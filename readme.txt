@@ -31,6 +31,25 @@ GUIs (Qt based - Beta):
 3) make
 4) ./install_qtapp
 
+```
+Note:
+In case you are getting the error like. this:
+/usr/bin/ld: cannot find -lGL: No such file or directory
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:429: rtknavi_qt] Error 1
+make[1]: Leaving directory '/home/om/Downloads/RTKLIB-b34k/app/qtapp/rtknavi_qt'
+make: *** [Makefile:80: sub-rtknavi_qt-make_first] Error 2
+
+The solution is:
+Install the Required OpenGL Development Libraries
+
+Depending on your Linux distribution, run one of the following commands to install the necessary OpenGL libraries:
+Ubuntu/Debian-based systems:
+
+sudo apt update
+sudo apt install libgl1-mesa-dev
+```
+
 Windows binaries can be found on the release page.
 Pre-complied linux packages are available at https://build.opensuse.org/package/show/home:ReimannJens/rtklib-qt.
 
