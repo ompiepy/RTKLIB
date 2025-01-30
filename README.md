@@ -50,6 +50,21 @@ sudo apt update
 sudo apt install libgl1-mesa-dev
 ```
 
+```
+Note:
+In case you are getting the error like. this:
+
+make[1]: Leaving directory '/home/username/Downloads/RTKLIB-demo5/src'
+cd rtknavi_qt/ && ( test -e Makefile || /usr/lib/qt5/bin/qmake -o Makefile /home/username/Downloads/RTKLIB-demo5/app/qtapp/rtknavi_qt/rtknavi_qt.pro ) && make -f Makefile 
+Project ERROR: Unknown module(s) in QT: serialport
+make: *** [Makefile:80: sub-rtknavi_qt-make_first] Error 3
+
+The solution is:
+For Ubuntu/Debian:
+Run the following command to install the required package:
+sudo apt-get install qtserialport5-dev
+```
+
 Windows binaries can be found on the release page.
 Pre-complied linux packages are available at https://build.opensuse.org/package/show/home:ReimannJens/rtklib-qt.
 
